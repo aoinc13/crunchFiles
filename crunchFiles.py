@@ -6,7 +6,7 @@ prevFilename = ""
 count = 0
 fileSet = []
 
-def stip(fileList):
+def crunch(fileList):
        # loop through list delete all but last item
        # rename last file
        index=0
@@ -44,14 +44,14 @@ for root, dirs, files in os.walk(STARTDIR, topdown=False):
         if prevFilename != filename:
             if count > 1:
               if fileSet:
-                 stip(fileSet)        
+                 crunch(fileSet)        
                  fileSet = []
             prevFilename = filename
         fileSet.append({'path': root, 'fullFilename': name, 'baseFilename': filename, 'extension': extension})
 
    # handle last series
    if fileSet:
-       stip(fileSet)        
+       crunch(fileSet)        
        fileSet = []
 
    count=0
