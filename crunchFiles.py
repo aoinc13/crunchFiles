@@ -36,11 +36,11 @@ for root, dirs, files in os.walk(STARTDIR, topdown=False):
    for name in files:
       count +=1
       # regular expression to break up parts of the file name.
-      what = re.search(r"(.*?)(\(\d{4}\_\d{2}_\d{2}\s\d{2}\_\d{2}\_\d{2}\sutc\))(\..*)", name, re.I)
-      if what != None:
-        filename = what.group(1).strip()
-        utcDate = what.group(2).strip()
-        extension = what.group(3).strip()
+      parts = re.search(r"(.*?)(\(\d{4}\_\d{2}_\d{2}\s\d{2}\_\d{2}\_\d{2}\sutc\))(\..*)", name, re.I)
+      if parts != None:
+        filename = parts.group(1).strip()
+        utcDate = parts.group(2).strip()
+        extension = parts.group(3).strip()
         if prevFilename != filename:
             if count > 1:
               if fileSet:
