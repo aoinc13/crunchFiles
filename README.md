@@ -1,7 +1,7 @@
 # crunchFiles.py
 
 The Windows File History feature is very useful, especially if you want to revert a file to a previous version. This feature is built into Windows File Explorer. However, there are some cases where you might need to restore the entire backup to a new computer. In that case File Explorer may not help.  
-If you have a Windows File History backup, but need to restore the directories and files to a new computer use this script.  
+If you have a Windows File History backup, but need to restore the directories and files to a new computer use this script to remove duplicates and strip off the UTC timestamp.  
 
 * Install Python
 * Copy the crunchFiles.py to your computer in for example, c:\temp\crunchFiles.py. 
