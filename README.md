@@ -13,7 +13,7 @@ If you have a Windows File History backup, but need to restore the directories a
 ```
 
 You will be prompted for the full path to the root directory that you want to consolidate. 
-For example, you might have a directory with UTC timestamps on them and you only want the latest file but also stripping off the timestamp.
+For example, you might have a directory with UTC timestamps on them and you only want the latest file but also with timestamps stripped off.
 
 ```
 leaf (2022_01_12 01_06_30 UTC).svg
